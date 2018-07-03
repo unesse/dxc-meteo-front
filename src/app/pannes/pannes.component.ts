@@ -84,18 +84,18 @@ export class PannesComponent implements OnInit {
 //       })
 //     },300);
    
-this.http.get("http://16.19.50.171:8080/Components/3PAR/networkState")
+this.http.get("https://dxc-meteo-back.herokuapp.com/Components/3PAR/networkState")
 .map((resp)=>resp.json())
 .subscribe(data=> {  
   this.network=data;
 });
-this.http.get("http://16.19.50.171:8080/Components/3PAR/licenceState")
+this.http.get("https://dxc-meteo-back.herokuapp.com/Components/3PAR/licenceState")
 .map((resp)=>resp.json())
 .subscribe(data=> {  
   this.licenceState=data;
  
 });
-    this.http.get("http://16.19.50.171:8080/Components/3PAR/disks")
+    this.http.get("https://dxc-meteo-back.herokuapp.com/Components/3PAR/disks")
     .map((resp)=>resp.json())
     .subscribe(data=> {  
       this.disk3par=data;
@@ -110,7 +110,7 @@ this.http.get("http://16.19.50.171:8080/Components/3PAR/licenceState")
         }
       }
     });
-    this.http.get("http://16.19.50.171:8080/Components/3PAR/ports")
+    this.http.get("https://dxc-meteo-back.herokuapp.com/Components/3PAR/ports")
     .map((resp)=>resp.json())
     .subscribe(data=> {  
       this.port3par=data;
@@ -132,7 +132,7 @@ this.http.get("http://16.19.50.171:8080/Components/3PAR/licenceState")
         }
       }
     });
-    this.http.get("http://16.19.50.171:8080/Components/3PAR/physicals/")
+    this.http.get("https://dxc-meteo-back.herokuapp.com/Components/3PAR/physicals/")
     .map((resp)=>resp.json())
     .subscribe(data=> {  
       this.phy3par=data;
@@ -155,28 +155,28 @@ this.http.get("http://16.19.50.171:8080/Components/3PAR/licenceState")
       }
       
     });
-    this.http.get("http://16.19.50.171:8080/Panes/3PAR/physicals")
+    this.http.get("https://dxc-meteo-back.herokuapp.com/Panes/3PAR/physicals")
     .map((resp)=>resp.json())
     .subscribe(data=> {  
       this.phy3parArchive=data;
     });
-    this.http.get("http://16.19.50.171:8080/Panes/3PAR/logicals")
+    this.http.get("https://dxc-meteo-back.herokuapp.com/Panes/3PAR/logicals")
     .map((resp)=>resp.json())
     .subscribe(data=> {  
       this.log3parArchive=data;
     });
-    this.http.get("http://16.19.50.171:8080/Panes/3PAR/ports")
+    this.http.get("https://dxc-meteo-back.herokuapp.com/Panes/3PAR/ports")
     .map((resp)=>resp.json())
     .subscribe(data=> {  
       this.port3parArchive=data;
     });
-    this.http.get("http://16.19.50.171:8080/Panes/3PAR/disks")
+    this.http.get("https://dxc-meteo-back.herokuapp.com/Panes/3PAR/disks")
     .map((resp)=>resp.json())
     .subscribe(data=> {  
       this.disk3parArchive=data;
     });
 
-    this.http.get("http://16.19.50.171:8080/Components/3PAR/logicals/")
+    this.http.get("https://dxc-meteo-back.herokuapp.com/Components/3PAR/logicals/")
     .map((resp)=>resp.json())
     .subscribe(data=> {  
       this.log3par=data;
@@ -496,14 +496,14 @@ this.http.get("http://16.19.50.171:8080/Components/3PAR/licenceState")
       }
     });
     });
-    this.http.get("http://16.19.50.171:8080/Components/3PAR/alerts/chercherAlert?r="+this.motCle)
+    this.http.get("https://dxc-meteo-back.herokuapp.com/Components/3PAR/alerts/chercherAlert?r="+this.motCle)
     .map((resp)=>resp.json())
     .subscribe(data=> {  
       this.alerts3par=data.content;
       
     });
 
-    this.http.get("http://16.19.50.171:8080/Components/3PAR/freeSpace/")
+    this.http.get("https://dxc-meteo-back.herokuapp.com/Components/3PAR/freeSpace/")
     .map((resp)=>resp.json())
     .subscribe(data=> {  
       this.rawFree=data.rawFree;
@@ -528,13 +528,13 @@ this.http.get("http://16.19.50.171:8080/Components/3PAR/licenceState")
 
   
    
-    this.http.get("http://16.19.50.171:8080/Components/3PAR/batteries")
+    this.http.get("https://dxc-meteo-back.herokuapp.com/Components/3PAR/batteries")
     .map((resp)=>resp.json())
     .subscribe(data=> {  
       this.battery3par=data;
       
     });
-    this.http.get("http://16.19.50.171:8080/Components/3PAR/nodes")
+    this.http.get("https://dxc-meteo-back.herokuapp.com/Components/3PAR/nodes")
     .map((resp)=>resp.json())
     .subscribe(data=> {  
       this.nodes3par=data;
@@ -625,7 +625,7 @@ this.http.get("http://16.19.50.171:8080/Components/3PAR/licenceState")
       .draw();
         })
       },300);
-    this.http.get("http://16.19.50.171:8080/Components/3PAR/physicals/")
+    this.http.get("https://dxc-meteo-back.herokuapp.com/Components/3PAR/physicals/")
     .map((resp)=>resp.json())
     .subscribe(data=> {  
       this.phy3par=data;
@@ -662,7 +662,7 @@ this.http.get("http://16.19.50.171:8080/Components/3PAR/licenceState")
       .draw();
         })
       },300);
-    this.http.get("http://16.19.50.171:8080/Components/3PAR/physicals/")
+    this.http.get("https://dxc-meteo-back.herokuapp.com/Components/3PAR/physicals/")
     .map((resp)=>resp.json())
     .subscribe(data=> {  
       this.phy3par=data;
@@ -702,7 +702,7 @@ this.http.get("http://16.19.50.171:8080/Components/3PAR/licenceState")
       .draw();
         })
       },300);
-    this.http.get("http://16.19.50.171:8080/Components/3PAR/logicals/")
+    this.http.get("https://dxc-meteo-back.herokuapp.com/Components/3PAR/logicals/")
     .map((resp)=>resp.json())
     .subscribe(data=> {  
       this.log3par=data;
@@ -739,7 +739,7 @@ this.http.get("http://16.19.50.171:8080/Components/3PAR/licenceState")
       .draw();
         })
       },300);
-    this.http.get("http://16.19.50.171:8080/Components/3PAR/logicals/")
+    this.http.get("https://dxc-meteo-back.herokuapp.com/Components/3PAR/logicals/")
     .map((resp)=>resp.json())
     .subscribe(data=> {  
       this.log3par=data;
@@ -779,7 +779,7 @@ this.http.get("http://16.19.50.171:8080/Components/3PAR/licenceState")
       .draw();
         })
       },300);
-    this.http.get("http://16.19.50.171:8080/Components/3PAR/ports/")
+    this.http.get("https://dxc-meteo-back.herokuapp.com/Components/3PAR/ports/")
     .map((resp)=>resp.json())
     .subscribe(data=> {  
       this.port3par=data;
@@ -816,7 +816,7 @@ this.http.get("http://16.19.50.171:8080/Components/3PAR/licenceState")
       .draw();
         })
       },300);
-    this.http.get("http://16.19.50.171:8080/Components/3PAR/ports/")
+    this.http.get("https://dxc-meteo-back.herokuapp.com/Components/3PAR/ports/")
     .map((resp)=>resp.json())
     .subscribe(data=> {  
       this.port3par=data;
@@ -852,7 +852,7 @@ this.http.get("http://16.19.50.171:8080/Components/3PAR/licenceState")
       .draw();
         })
       },300);
-    this.http.get("http://16.19.50.171:8080/Components/3PAR/disks/")
+    this.http.get("https://dxc-meteo-back.herokuapp.com/Components/3PAR/disks/")
     .map((resp)=>resp.json())
     .subscribe(data=> {  
       this.disk3par=data;
@@ -887,7 +887,7 @@ this.http.get("http://16.19.50.171:8080/Components/3PAR/licenceState")
   
 
   onSearchAlert(e){
-    this.http.get("http://16.19.50.171:8080/Components/3PAR/alerts/chercherAlert?r="+this.motCle)
+    this.http.get("https://dxc-meteo-back.herokuapp.com/Components/3PAR/alerts/chercherAlert?r="+this.motCle)
     .map((resp)=>resp.json())
     .subscribe(data=> {  
       this.alerts3par=data.content;
@@ -936,37 +936,37 @@ this.http.get("http://16.19.50.171:8080/Components/3PAR/licenceState")
   }
   
   update(){
-    this.http.get("http://16.19.50.171:8080/3PAR/update/physicals")
+    this.http.get("https://dxc-meteo-back.herokuapp.com/3PAR/update/physicals")
     .map((resp)=>resp)
     .subscribe(data=> {  
      
     });
-    this.http.get("http://16.19.50.171:8080/3PAR/update/logicals")
+    this.http.get("https://dxc-meteo-back.herokuapp.com/3PAR/update/logicals")
     .map((resp)=>resp)
     .subscribe(data=> {  
      
     });
-    this.http.get("http://16.19.50.171:8080/3PAR/update/ports")
+    this.http.get("https://dxc-meteo-back.herokuapp.com/3PAR/update/ports")
     .map((resp)=>resp)
     .subscribe(data=> {  
      
     });
-    this.http.get("http://16.19.50.171:8080/3PAR/update/disks")
+    this.http.get("https://dxc-meteo-back.herokuapp.com/3PAR/update/disks")
     .map((resp)=>resp)
     .subscribe(data=> {  
      
     });
-    this.http.get("http://16.19.50.171:8080/3PAR/update/alerts")
+    this.http.get("https://dxc-meteo-back.herokuapp.com/3PAR/update/alerts")
     .map((resp)=>resp)
     .subscribe(data=> {  
      
     });
-    this.http.get("http://16.19.50.171:8080/3PAR/update/nodes")
+    this.http.get("https://dxc-meteo-back.herokuapp.com/3PAR/update/nodes")
     .map((resp)=>resp)
     .subscribe(data=> {  
      
     });
-    this.http.get("http://16.19.50.171:8080/3PAR/update/batteries")
+    this.http.get("https://dxc-meteo-back.herokuapp.com/3PAR/update/batteries")
     .map((resp)=>resp)
     .subscribe(data=> {  
      
